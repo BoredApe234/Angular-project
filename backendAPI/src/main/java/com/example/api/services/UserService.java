@@ -17,4 +17,7 @@ public class UserService {
 	public AppUser fetchUserByUsername(String name) {
 		return regisRepo.findByUsername(name);
 	}
+	public AppUser fetchUserByUsernameandPassword(String name, String password) {
+		return regisRepo.findByUsernameAndPassword(name, password);
+	}
 }

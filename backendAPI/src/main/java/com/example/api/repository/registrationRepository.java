@@ -7,4 +7,5 @@ import com.example.api.model.AppUser;
 @Repository
 public interface registrationRepository extends JpaRepository<AppUser, Long> {
 	AppUser findByUsername(String name);
+	AppUser findByUsernameAndPassword(String name, String password);
 }
