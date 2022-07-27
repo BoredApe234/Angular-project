@@ -26,10 +26,10 @@ public class BackendApiApplication implements CommandLineRunner{
 	registrationRepository repo;
 	@Override
 	public void run(String... args) throws Exception{
-		repo.save(new AppUser("Harsh","1111"));
-		repo.save(new AppUser("Abhinav","1111"));
-		repo.save(new AppUser("Itee","1111"));
-		repo.save(new AppUser("Yaksha","1111"));
+		repo.save(new AppUser("Harsh","1111","",""));
+		repo.save(new AppUser("Abhinav","1111","",""));
+		repo.save(new AppUser("Itee","1111","",""));
+		repo.save(new AppUser("Yaksha","1111","",""));
 	}
 	
 

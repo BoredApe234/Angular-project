@@ -13,7 +13,16 @@ public class UserService {
 	public AppUser saveUser(AppUser user) {
 		return regisRepo.save(user);
 	}
-	
+	public boolean checkUsername(String name) {
+		AppUser usr=null;
+		try {
+			usr = regisRepo.findByUsername(name);
+		}
+		catch(Exception e){
+			//empty
+		}
+		return (usr==null)?true:false;
+	}
 	public AppUser fetchUserByUsername(String name) {
 		return regisRepo.findByUsername(name);
 	}

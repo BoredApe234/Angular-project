@@ -20,11 +20,11 @@ export class LoginComponent implements OnInit {
   }
   loginUser(){
     this._service.loginUserFromRemote(this.user).subscribe({
-      next: ()=>{console.log("Received")
+      next: ()=>{console.log("Received");
     this._router.navigate(['/loginsuccess'])},
       error: ()=>{
-        console.log("Error: Bad Credentail");
-        this.msg = "Bad Credentials. Please enter your credentials again";
+        console.log("Error: Bad Credentail/ Username not found with given Credentials");
+        this.msg = "Bad Credentials. Please check and enter your credentials again";
       }
     });
   }

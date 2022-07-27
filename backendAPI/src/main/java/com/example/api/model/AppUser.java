@@ -14,6 +14,10 @@ public class AppUser {
 	String username;
 	@Column(name = "password")
 	String password;
+	@Column(name = "designation")
+	String desig;
+	@Column(name = "number")
+	String number;
 	public String getPassword() {
 		return password;
 	}
@@ -23,8 +27,10 @@ public class AppUser {
 	public AppUser() {
 		
 	}
-	public AppUser(String username, String password) {
+	public AppUser(String username, String password,String desig, String number) {
 		super();
+		this.desig = desig;
+		this.number = number;
 		this.username = username;
 		this.password = features.encode(password);
 	}
@@ -48,7 +54,7 @@ public class AppUser {
 	}
 	@Override
 	public String toString() {
-		return "AppUser [id=" + id + ", username=" + username + ", password=" + password + "]";
+		return "AppUser [id=" + id + ", username=" + username + ", password=" + password + ", desig=" + desig + ", number=" + number + "]";
 	}
 	
 }
